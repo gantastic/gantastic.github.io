@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description"
+        content="NoiseCLR discovers latent directions in text-to-image diffusion models in an unsupervised way.">
+        <meta name="keywords" content="Diffusion Models, Latent Space Exploration">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src=""></script>
+        <title>GANTASTIC</title>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+        dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+        </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    </head>
+
+    <body>
+
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">GANTASTIC: <u>GAN</u>-based <u>T</u>r<u>a</u>n<u>s</u>fer of <u>I</u>nterpretable Dire<u>c</u>tions for Disentangled Image Editing in Text-to-Image Diffusion Models</h1>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                    <a href="https://yusufdalva.github.io/">Yusuf Dalva</a>,</span>
+                    <span class="author-block">
+                        <a href="https://sites.google.com/view/hidir-yesiltepe/">Hidir Yesiltepe</a>,</span>
+                  <span class="author-block">
+                    <a href="https://pinguar.org/">Pinar Yanardag</a>
+                  </span>
+                </div>
+      
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">Virginia Tech</span>
+                </div>
+      
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                    <!-- PDF Link. -->
+                    <span class="link-block">
+                      <a
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                    <!-- Code Link. -->
+                    <span class="link-block">
+                      <a
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code (Coming soon)</span>
+                        </a>
+                    </span>
+                    <!-- Dataset Link. -->
+                    <!-- <span class="link-block">
+                      <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="far fa-images"></i>
+                        </span>
+                        <span>Data</span>
+                        </a> -->
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <h4 class="subtitle">
+                <b>TL;DR</b> We propose a framework that transfers editing directions from pre-trained GANs (e.g. StyleGAN) to diffusion models (e.g. Stable Diffusion) without any finetuning on either of these models.  
+                <!--
+                <span class="dnerf">NoiseCLR</span> discovers semantic directions in latent diffusion models in a completely unsupervised manner. 
+                With this work, we present latent directions discovered in domains such as Art, Fashion, Face, Cats and Cars in Stable Diffusion. -->
+            </h4>
+            <div class="container">
+                <img src="./static/images/teaser.png" />
+                <br/>
+                <p>
+                <b>GANTASTIC</b> is a novel framework that transfers interpretable directions  from pre-trained GAN models directly into diffusion-based models to enable disentangled and controllable image editing.</i>
+                </p>
+            </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <!-- Abstract. -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                    The rapid advancement in image generation models has predominantly been driven by diffusion models, which have demonstrated unparalleled success in generating high-fidelity, diverse images from textual prompts. 
+                    Despite their success, diffusion models encounter substantial challenges in the domain of image editing, particularly in executing disentangled edits—changes that target specific attributes of an image while leaving 
+                    irrelevant parts untouched. In contrast, Generative Adversarial Networks (GANs) have been recognized for their success in disentangled edits through their interpretable latent spaces. We introduce  <b>GANTASTIC</b>, 
+                    a novel framework that   takes existing directions from pre-trained GAN models—representative of specific, controllable attributes—and transfers these directions into diffusion-based models. This novel approach not only 
+                    maintains the generative quality and diversity that diffusion models are known for but also significantly enhances their capability to perform precise, targeted image edits, thereby leveraging the best of both worlds.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--/ Abstract. -->
+      
+        
+        <!-- Method -->
+        <section class="section">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-12">
+                <h2 class="title is-3">Method</h2>
+      
+                <div class="content has-text-justified">
+                  <!--
+                  <p>
+                   Explain method
+                  </p>
+                -->
+                  <div class="container">
+                    <img src="./static/images/framework.png" />
+                    <br />
+                  </div>
+      
+                  <p>
+                    After generating a set of <i>N</i> images using StyleGAN, denoted as <i>G(s)</i>, and their edited versions, denoted as <i>G(s + &Delta;s)</i>, our framework learns a latent direction $d$ that reflects 
+                    the edits introduced by <i>&Delta;s</i> (e.g. beard) to the pre-trained diffusion model. To effectively learn such a latent direction, we utilize both the denoising network used by the diffusion model, and the CLIP Image Encoder.  
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+          <section class="section">
+            <div class="container is-max-desktop">
+                <h1 class="title is-3 has-text-centered">Directions Transferred by GANTASTIC</h1>
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-12">
+            
+                      <div class="content">
+                        <div class="container">
+                          <img class="center" src="./static/images/main_figure.png"/>
+                          <br />
+                        </div>
+            
+                        <p>
+                            <b>GANTASTIC</b> successfully transfers editing directions that modify the overall look, including changes in <i>race</i> or <i>aging</i>, as well as more 
+                            detailed edits that target specific facial attributes, such as <i>eyeglasses</i> or a <i>beard</i>. <b>GANTASTIC</b> can also distinguish among various edits 
+                            for the same feature underlines the versatility of our approach, providing users with an extensive selection of editing options for individual characteristics, like multiple 
+                            smile designs or styles of baldness.
+                        </p>
+            </div>
+            </section>
+
+            <section class="section">
+                <div class="container is-max-desktop">
+                    <h1 class="title is-3 has-text-centered">Capabilities of GANTASTIC</h1>
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-12">
+                
+                          <div class="content">
+                            <div class="container">
+                              <img class="center" src="./static/images/capabilities.png"/>
+                              <br />
+                            </div>
+                
+                            <p>
+                                The proposed framework can successfully learn latent directions from a variety of domains including human faces and dog images. Additioanlly, <b>GANTASTIC</b> enables users to adjust 
+                                the intensity of the editing effect through a scaling parameter. This functionality gives users the flexibility to either tone down or intensify the impact of a given editing direction. 
+                                For instance, in the case of the <i>gender</i> edit, users can lessen the effect for a more <i>masculine</i> appearance or enhance it for a more <i>feminine</i> look by applying 
+                                a negative or positive scale, respectively.
+                            </p>
+                </div>
+    
+            </section>
+
+            <section class="section">
+                <div class="container is-max-desktop">
+                    <h1 class="title is-3 has-text-centered">Comparisons with StyleGAN edits</h1>
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-12">
+                
+                          <div class="content">
+                            <div class="container">
+                              <img class="center" src="./static/images/gan_to_diffusion.png"/>
+                              <br />
+                            </div>
+                
+                            <p>
+                                We demonstrate the beard, gender, race and baldness edits above, along with reference images from the training datasets constructed using StyleGAN. Above, we show the images generated 
+                                by StyleGAN as <i>G(s)</i> and their edited counter-parts as <i>G(s + &Delta;s)</i>, respectively. As our qualitative results also show, edits learned by <b>GANTASTIC</b> successfully 
+                                translates the disentangled directions performed on StyleGAN to Stable Diffusion.
+                            </p>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container is-max-desktop">
+                    <h1 class="title is-3 has-text-centered">Editing Complex Scenes</h1>
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-12">
+                
+                          <div class="content">
+                            <div class="container">
+                              <img class="center" src="./static/images/additional_results_arxiv.png"/>
+                              <br />
+                            </div>
+                
+                            <p>
+                                We demonstrate edits performed by <b>GANTASTIC</b> framework on full-body images (Row 1), and images with multiple faces (Row 2). Additionally, for the example with multiple faces (Row 2), 
+                                editing the gender attribute amplifies the feminine traits in both of the faces.
+                            </p>
+                </div>
+            </section>
+
+          <section class="section" id="BibTeX">
+            <div class="container is-max-desktop content">
+              <h2 class="title">BibTeX</h2>
+              <pre><code>
+
+              </code></pre>
+            </div>
+          </section>
+          
+          <footer class="footer">
+            <div class="container">
+              <div class="content has-text-centered is-centered">
+                <a class="icon-link" href="https://github.com/yusufdalva" class="external-link" disabled>
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <div class="columns">
+                <div class="column is-8">
+                  <div class="content has-text-justified">
+                    <!-- <p>
+                      This website is licensed under a <a rel="license"
+                                                          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                      Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p> -->
+                    <p>This page is adapted from <a
+                        href="https://github.com/nerfies/nerfies.github.io">this</a> implementation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </body>
+</html>
